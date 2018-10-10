@@ -20,3 +20,310 @@
    20  git push origin master
    21  history
 
+SE14L0120-25:gittest2526 a01054839$ cd ~/desktop
+SE14L0120-25:desktop a01054839$ mkdir Q1
+SE14L0120-25:desktop a01054839$ cp -r gittest2526 q1
+SE14L0120-25:desktop a01054839$ cd gittest2526
+SE14L0120-25:gittest2526 a01054839$ git tag ver1.00
+SE14L0120-25:gittest2526 a01054839$ git push origin ver1.00
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/rgreywall/GitTest2526.git
+ * [new tag]         ver1.00 -> ver1.00
+SE14L0120-25:gittest2526 a01054839$ git branch special_feature
+SE14L0120-25:gittest2526 a01054839$ git checkout special_feature
+Switched to branch 'special_feature'
+SE14L0120-25:gittest2526 a01054839$ cd ~/downloads
+SE14L0120-25:downloads a01054839$ cd assets
+SE14L0120-25:assets a01054839$ cd myfile.bak
+-bash: cd: myfile.bak: Not a directory
+SE14L0120-25:assets a01054839$ cd assets
+-bash: cd: assets: No such file or directory
+SE14L0120-25:assets a01054839$ cd ~/downloads
+SE14L0120-25:downloads a01054839$ cd assets
+SE14L0120-25:assets a01054839$ myfile.bak | grep "myhtml"
+-bash: myfile.bak: command not found
+SE14L0120-25:assets a01054839$ cat myfile.bak | grep "myhtml"
+<!--myhtml--><head><title>Stars!</title><link href="index.css" type="text/css" rel="stylesheet" /></head><body><div id='sky'></div><button id='scramble'>Scramble</button><script src="index.js"></script>3</body>
+SE14L0120-25:assets a01054839$ cd ~/desktop
+SE14L0120-25:desktop a01054839$ cd gittest2526
+SE14L0120-25:gittest2526 a01054839$ nano index.html
+SE14L0120-25:gittest2526 a01054839$ git commit -m "added text to index.html"
+On branch special_feature
+Changes not staged for commit:
+	modified:   index.html
+
+Untracked files:
+	commands.txt
+
+no changes added to commit
+SE14L0120-25:gittest2526 a01054839$ git add index.html
+SE14L0120-25:gittest2526 a01054839$ git commit -m "added text to index.html"
+[special_feature f7bd51f] added text to index.html
+ Committer: Ramneet Grewal <a01054839@se14l0120-25.ad.bcit.ca>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+SE14L0120-25:gittest2526 a01054839$ git push origin special_feature
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 466 bytes | 466.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'special_feature' on GitHub by visiting:
+remote:      https://github.com/rgreywall/GitTest2526/pull/new/special_feature
+remote: 
+To https://github.com/rgreywall/GitTest2526.git
+ * [new branch]      special_feature -> special_feature
+SE14L0120-25:gittest2526 a01054839$ cd ~/downloads
+SE14L0120-25:downloads a01054839$ cd assets
+SE14L0120-25:assets a01054839$ cat myfile.bak | grep "myjs"
+/*myjs*/var sky=document.getElementById("sky");var stars=[];var trail=[];var scramble=document.getElementById("scramble");function CreateStar(x,y,w,h){var width=w;var height=h;var star=document.createElement("div");star.innerHTML='<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 484.27 462.8"><defs><style>.cls-1{fill:#ffd400;}.cls-2{fill:#6f6f6e;}</style></defs><title>Super_Mario_-_Art_-_Super_Star</title><path class="cls-1" d="M494.12,193.51c-2.76-7.95-12-16.51-88.9-25.46-30.6-3.6-61-5.8-72.79-6.65-4.34-11-15.6-39.16-28.27-67.13C272.26,23.85,260.72,18,252.41,18s-19.92,5.88-52.06,76.4c-12.82,28-24.19,56.2-28.6,67.17-11.7.76-41.77,2.86-72.05,6.29C23.41,176.45,14.14,185.41,11.41,193a13.26,13.26,0,0,0-.81,4.46c0,8.73,9.15,24.58,57.17,68.69C90.53,287,113.91,306.7,123,314.32c-2.88,11.46-10.27,41-16.41,71.25-7.36,36-10,57.57-10,70.82,0,14.56,3.18,19,6.61,21.6,6.86,5.19,19.26,7.07,87.22-31.27,27-15.25,53.09-31.45,63.15-37.8,9.93,6.29,35.7,22.29,62.44,37.4,67.08,37.89,79.92,36.5,86.68,32.17,3.93-2.53,7.49-6.9,7.49-22.31,0-13.39-2.64-35-9.89-70.78-6.24-30.72-13.68-60.89-16.62-72.48,9-7.5,32.12-26.77,54.55-47.29,47.58-43.43,56.6-59,56.6-67.73a13.93,13.93,0,0,0-.74-4.41" transform="translate(-10.6 -17.97)"/><path class="cls-2" d="M212.54,294.41c-13-.15-14.73-22.16-14.73-48.26s2.81-45.28,15.13-46.35c14.14-1.32,14.12,21.24,14.12,47.36s-2.1,47.36-14.53,47.25" transform="translate(-10.6 -17.97)"/><path class="cls-2" d="M294.33,294.41c-12.43.12-14.56-21.16-14.56-47.25s0-48.69,14.19-47.36c12.27,1.07,15.08,20.31,15.08,46.35s-1.71,48.12-14.71,48.26" transform="translate(-10.6 -17.97)"/></svg>';sky.appendChild(star);star.style.position="absolute";star.style.top=(y-height/2)+"px";star.style.left=(x-width/2)+"px";star.style.width=width+"px";star.style.height=height+"px";star.style.transition="width 1s, height 1s, left 2s, top 2s";return star};setInterval(function(){for(var i=0;i<stars.length;i++){stars[i].style.top=Math.round(Math.random()*window.innerHeight)+"px"}},1000);setInterval(function(){var size=Math.round(Math.random()*50);var trailStar=CreateStar(Math.round(Math.random()*window.innerWidth),Math.round(Math.random()*window.innerHeight),size,size);var deg=Math.round(Math.random()*360);trailStar.style.webkitFilter="hue-rotate("+deg+"deg)";trailStar.style.opacity=Math.random();setTimeout(function(){trailStar.style.left=Math.round(Math.random()*window.innerWidth)+"px";trailStar.style.top=Math.round(Math.random()*window.innerHeight)+"px"},100);stars.push(trailStar);if(stars.length>100){sky.removeChild(stars[0]);stars.splice(0,1)}document.body.style.background="rgb(0,0,"+Math.round(Math.random()*100)+")"},100);document.body.onmousemove=function(ev){var size=Math.round(Math.random()*50);var trailStar=CreateStar(ev.pageX,ev.pageY,size,size);trailStar.style.opacity=Math.random();trailStar.style.pointerEvents="none";var deg=Math.round(Math.random()*360);trailStar.style.webkitFilter="hue-rotate("+deg+"deg)";trail.push(trailStar);if(trail.length>50){sky.removeChild(trail[0]);trail.splice(0,1)}setTimeout(function(){trailStar.style.left=Math.round(Math.random()*window.innerWidth)+"px";trailStar.style.top=Math.round(Math.random()*window.innerHeight)+"px"},100)};scramble.onclick=function(){for(var i=0;i<stars.length;i++){var left=Math.round(Math.random()*window.innerWidth);var top=Math.round(Math.random()*window.innerHeight);stars[i].style.left=left+"px";stars[i].style.top=top+"px"}};document.body.onclick=function(ev){if(ev.altKey==false){return false}console.log(ev);var star=CreateStar(ev.pageX,ev.pageY,25,25);stars.push(star);star.onclick=function(ev2){var input1=document.createElement("input");input1.style.position="absolute";input1.style.left=ev2.pageX+"px";input1.style.top=ev2.pageY+"px";sky.appendChild(input1);var thisStar=this;input1.onkeyup=function(key){if(key.keyCode==13){thisStar.style.width=this.value+"px";thisStar.style.height=this.value+"px";sky.removeChild(this)}}}};
+SE14L0120-25:assets a01054839$ cat myfile.bak | grep "myjs" > ~/desktop/gittest2526/index.js
+SE14L0120-25:assets a01054839$ cd ~/desktop/gittest2526
+SE14L0120-25:gittest2526 a01054839$ git add index.js
+SE14L0120-25:gittest2526 a01054839$ git commit -m "index.js"
+[special_feature 2abd929] index.js
+ Committer: Ramneet Grewal <a01054839@se14l0120-25.ad.bcit.ca>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.js
+SE14L0120-25:gittest2526 a01054839$ git push origin special_feature
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.83 KiB | 1.83 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rgreywall/GitTest2526.git
+   f7bd51f..2abd929  special_feature -> special_feature
+SE14L0120-25:gittest2526 a01054839$ cd ~/downloads
+SE14L0120-25:downloads a01054839$ cd assets
+SE14L0120-25:assets a01054839$ cat myfile.bak | grep "mycss" > ~/desktop/gittest2526/index.css
+SE14L0120-25:assets a01054839$ git add index.css
+fatal: Not a git repository (or any of the parent directories): .git
+SE14L0120-25:assets a01054839$ cd ~/desktop/gittest2526
+SE14L0120-25:gittest2526 a01054839$ git add index.css
+SE14L0120-25:gittest2526 a01054839$ git commit -m "index.css"
+[special_feature e7f6f4c] index.css
+ Committer: Ramneet Grewal <a01054839@se14l0120-25.ad.bcit.ca>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.css
+SE14L0120-25:gittest2526 a01054839$ git push origin special_feature
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 469 bytes | 469.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rgreywall/GitTest2526.git
+   2abd929..e7f6f4c  special_feature -> special_feature
+SE14L0120-25:gittest2526 a01054839$ git checkout origin master
+error: pathspec 'master' did not match any file(s) known to git.
+SE14L0120-25:gittest2526 a01054839$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+SE14L0120-25:gittest2526 a01054839$ git merge special_feature
+Updating 5c8da7f..e7f6f4c
+Fast-forward
+ index.css  | 1 +
+ index.html | 2 ++
+ index.js   | 1 +
+ 3 files changed, 4 insertions(+)
+ create mode 100644 index.css
+ create mode 100644 index.js
+SE14L0120-25:gittest2526 a01054839$ git add special_feature
+fatal: pathspec 'special_feature' did not match any files
+SE14L0120-25:gittest2526 a01054839$ git commit -m "special_feature"
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+	commands.txt
+
+nothing added to commit but untracked files present
+SE14L0120-25:gittest2526 a01054839$ git add commands.txt
+SE14L0120-25:gittest2526 a01054839$ git commit -m "commands.txt"
+[master c255aee] commands.txt
+ Committer: Ramneet Grewal <a01054839@se14l0120-25.ad.bcit.ca>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 22 insertions(+)
+ create mode 100644 commands.txt
+SE14L0120-25:gittest2526 a01054839$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 526 bytes | 526.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rgreywall/GitTest2526.git
+   5c8da7f..c255aee  master -> master
+SE14L0120-25:gittest2526 a01054839$ git commit -m "special_feature"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+SE14L0120-25:gittest2526 a01054839$ git push origin master
+Everything up-to-date
+SE14L0120-25:gittest2526 a01054839$ git tag ver1.01
+SE14L0120-25:gittest2526 a01054839$ git push ver1.01
+fatal: 'ver1.01' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+SE14L0120-25:gittest2526 a01054839$ git checkout special_feature
+Switched to branch 'special_feature'
+SE14L0120-25:gittest2526 a01054839$ git commit -m "special feature"
+On branch special_feature
+nothing to commit, working tree clean
+SE14L0120-25:gittest2526 a01054839$ git push origin special_feature
+Everything up-to-date
+SE14L0120-25:gittest2526 a01054839$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+SE14L0120-25:gittest2526 a01054839$ git merge special_feature
+Already up to date.
+SE14L0120-25:gittest2526 a01054839$ git commit -m "merge"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+SE14L0120-25:gittest2526 a01054839$ git push origin master
+Everything up-to-date
+SE14L0120-25:gittest2526 a01054839$ git tag ver1.01
+fatal: tag 'ver1.01' already exists
+SE14L0120-25:gittest2526 a01054839$ git push origin 1.01
+error: src refspec 1.01 does not match any.
+error: failed to push some refs to 'https://github.com/rgreywall/GitTest2526.git'
+SE14L0120-25:gittest2526 a01054839$ git push origin ver1.01
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/rgreywall/GitTest2526.git
+ * [new tag]         ver1.01 -> ver1.01
+SE14L0120-25:gittest2526 a01054839$ history
+    1  cd desktop
+    2  mkdir Test2
+    3  git clone https://github.com/rgreywall/GitTest2526.git
+    4  mv -r test2 gittest2526
+    5  mv test2 gittest2526
+    6  git commit -m "move test2"
+    7  cd gittes2526
+    8  git commit -m "moved test2"
+    9  cd gittest2526
+   10  commit -m "moved test2"
+   11  git add test2
+   12  git commit -m "moved test 2"
+   13  git push origin master
+   14  touch index.html
+   15  nano index.html
+   16  git add index.html
+   17  git commit -m "index.html"
+   18  git config --global --edit
+   19  git commit -m "index.html"
+   20  git push origin master
+   21  history
+   22  nano commands.txt
+   23  cd desktop
+   24  cd ~/desktop
+   25  mkdir Q1
+   26  cp -r gittest2526 q1
+   27  cd gittest2526
+   28  git tag ver1.00
+   29  git push origin ver1.00
+   30  git branch special_feature
+   31  git checkout special_feature
+   32  cd ~/downloads
+   33  cd assets
+   34  cd myfile.bak
+   35  cd assets
+   36  cd ~/downloads
+   37  cd assets
+   38  myfile.bak | grep "myhtml"
+   39  cat myfile.bak | grep "myhtml"
+   40  cd ~/desktop
+   41  cd gittest2526
+   42  nano index.html
+   43  git commit -m "added text to index.html"
+   44  git add index.html
+   45  git commit -m "added text to index.html"
+   46  git push origin special_feature
+   47  cd ~/downloads
+   48  cd assets
+   49  cat myfile.bak | grep "myjs"
+   50  cat myfile.bak | grep "myjs" > ~/desktop/gittest2526/index.js
+   51  cd ~/desktop/gittest2526
+   52  git add index.js
+   53  git commit -m "index.js"
+   54  git push origin special_feature
+   55  cd ~/downloads
+   56  cd assets
+   57  cat myfile.bak | grep "mycss" > ~/desktop/gittest2526/index.css
+   58  git add index.css
+   59  cd ~/desktop/gittest2526
+   60  git add index.css
+   61  git commit -m "index.css"
+   62  git push origin special_feature
+   63  git checkout origin master
+   64  git checkout master
+   65  git merge special_feature
+   66  git add special_feature
+   67  git commit -m "special_feature"
+   68  git add commands.txt
+   69  git commit -m "commands.txt"
+   70  git push origin master
+   71  git commit -m "special_feature"
+   72  git push origin master
+   73  git tag ver1.01
+   74  git push ver1.01
+   75  git checkout special_feature
+   76  git commit -m "special feature"
+   77  git push origin special_feature
+   78  git checkout master
+   79  git merge special_feature
+   80  git commit -m "merge"
+   81  git push origin master
+   82  git tag ver1.01
+   83  git push origin 1.01
+   84  git push origin ver1.01
+   85  history
+
+
