@@ -1,0 +1,22 @@
+ 1  cd desktop
+    2  mkdir Test2
+    3  git clone https://github.com/rgreywall/GitTest2526.git
+    4  mv -r test2 gittest2526
+    5  mv test2 gittest2526
+    6  git commit -m "move test2"
+    7  cd gittes2526
+    8  git commit -m "moved test2"
+    9  cd gittest2526
+   10  commit -m "moved test2"
+   11  git add test2
+   12  git commit -m "moved test 2"
+   13  git push origin master
+   14  touch index.html
+   15  nano index.html
+   16  git add index.html
+   17  git commit -m "index.html"
+   18  git config --global --edit
+   19  git commit -m "index.html"
+   20  git push origin master
+   21  history
+
